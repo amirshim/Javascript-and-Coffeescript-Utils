@@ -10,7 +10,7 @@ class CancelableImageLoader
 	constructor: (emptySrc = '/empty.html') ->
 		@isLoading = false
 		@curSrc = null
-		@myiframe = $ '<iframe src="'+emptySrc+'" style="display:none;" />' # robots shoud be "empty.html"
+		@myiframe = $ """<iframe src="#{emptySrc}" style="display:none;" />""" # robots shoud be "empty.html"
 		@myiframe.appendTo 'body'
 		@myiframe.load =>
 			@myiframe.load = null

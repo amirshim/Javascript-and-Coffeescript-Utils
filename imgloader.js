@@ -15,7 +15,7 @@ CancelableImageLoader = (function() {
     }
     this.isLoading = false;
     this.curSrc = null;
-    this.myiframe = $('<iframe src="' + emptySrc + '" style="display:none;" />');
+    this.myiframe = $("<iframe src=\"" + emptySrc + "\" style=\"display:none;\" />");
     this.myiframe.appendTo('body');
     this.myiframe.load(__bind(function() {
       var img_tag;
